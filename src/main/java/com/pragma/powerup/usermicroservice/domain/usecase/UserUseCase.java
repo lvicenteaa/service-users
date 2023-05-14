@@ -1,6 +1,7 @@
 package com.pragma.powerup.usermicroservice.domain.usecase;
 
 import com.pragma.powerup.usermicroservice.domain.api.IUserServicePort;
+import com.pragma.powerup.usermicroservice.domain.model.Owner;
 import com.pragma.powerup.usermicroservice.domain.model.User;
 import com.pragma.powerup.usermicroservice.domain.spi.IUserPersistencePort;
 
@@ -16,6 +17,11 @@ public class UserUseCase implements IUserServicePort {
     @Override
     public void saveUser(User user) {
         userPersistencePort.saveUser(user);
+    }
+
+    @Override
+    public void saveOwner(Owner owner) {
+        userPersistencePort.saveUser(owner);
     }
 
     @Override
